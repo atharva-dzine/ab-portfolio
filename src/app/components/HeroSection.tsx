@@ -1,4 +1,4 @@
-import profileImg from "/Users/ab/Documents/Portfolio_v2/src/assets/fd392b1ad8ccdec269c24deecec4ff99211e098f.png";
+import profileImg from "../../assets/atharva_profile_picture.png";
 
 export function HeroSection() {
   return (
@@ -117,7 +117,7 @@ export function HeroSection() {
 
           {/* Glowing purple ring border */}
           <div
-            className="w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full flex items-center justify-center relative"
+            className="w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full relative overflow-hidden"
             style={{
               border: "6px solid #7C3AED",
               boxShadow:
@@ -125,46 +125,46 @@ export function HeroSection() {
               background: "#0D0D1A",
             }}
           >
+            {/* Photo: bottom stacking layer so tint/vignette sit on top */}
+            <div className="absolute inset-0 z-[1] rounded-full overflow-hidden">
+              <img
+                src={profileImg}
+                alt="Atharva — UI/UX Designer"
+                className="absolute inset-x-0 bottom-0 mx-auto h-[102%] w-auto min-w-[85%] max-w-none object-cover object-bottom"
+                style={{
+                  filter:
+                    "saturate(0.7) contrast(1.2) brightness(1.05) drop-shadow(0 -6px 32px rgba(124,58,237,0.6)) drop-shadow(0 8px 24px rgba(10,8,40,0.9))",
+                }}
+              />
+            </div>
+
             {/* Cool-blue shadow sweep at bottom */}
             <div
-              className="absolute inset-0 rounded-full pointer-events-none z-10"
+              className="absolute inset-0 z-[2] rounded-full pointer-events-none"
               style={{
                 background:
                   "radial-gradient(ellipse at 50% 110%, rgba(30,20,80,0.72) 0%, transparent 60%)",
               }}
             />
 
-            {/* Image */}
-            <div className="w-full h-full rounded-full overflow-hidden relative">
-              <img
-                src={profileImg}
-                alt="Atharva — UI/UX Designer"
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] object-contain object-bottom"
-                style={{
-                  filter:
-                    "saturate(0.7) contrast(1.2) brightness(1.05) drop-shadow(0 -6px 32px rgba(124,58,237,0.6)) drop-shadow(0 8px 24px rgba(10,8,40,0.9))",
-                }}
-              />
+            {/* Cool-blue shadow tint overlay */}
+            <div
+              className="absolute inset-0 z-[3] pointer-events-none rounded-full"
+              style={{
+                background:
+                  "linear-gradient(to top, rgba(10,8,40,0.5) 0%, rgba(20,10,60,0.2) 35%, transparent 65%)",
+                mixBlendMode: "multiply",
+              }}
+            />
 
-              {/* Cool-blue shadow tint overlay */}
-              <div
-                className="absolute inset-0 pointer-events-none rounded-full"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(10,8,40,0.65) 0%, rgba(20,10,60,0.25) 35%, transparent 65%)",
-                  mixBlendMode: "multiply",
-                }}
-              />
-
-              {/* Cinematic vignette */}
-              <div
-                className="absolute inset-0 pointer-events-none rounded-full"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(8,5,20,0.55) 100%)",
-                }}
-              />
-            </div>
+            {/* Cinematic vignette */}
+            <div
+              className="absolute inset-0 z-[4] pointer-events-none rounded-full"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(8,5,20,0.55) 100%)",
+              }}
+            />
           </div>
         </div>
       </div>
