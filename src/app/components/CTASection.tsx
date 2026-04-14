@@ -27,26 +27,29 @@ export function CTASection() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 w-full justify-center">
-          <a
-            href="mailto:atharva.dzine@gmail.com?subject=Project%20Inquiry&body=Hi%20Atharva%2C%20I%27d%20like%20to%20work%20with%20you%20on..."
-            className="bg-white text-[#0e0e0e] px-10 py-5 rounded-full text-[18px] font-bold hover:bg-[#f0f0f0] transition-colors inline-block text-center"
-          >
-            Start a Project
-          </a>
-          <a
-            href="/src/imports/Atharva_final.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download="Atharva_Resume.pdf"
-            className="text-white px-10 py-5 rounded-full text-[18px] font-bold hover:bg-white/5 transition-colors inline-block text-center"
-            style={{
-              background: "#1f1f1f",
-              border: "1px solid rgba(72,72,72,0.3)",
-            }}
-          >
-            Resume / CV
-          </a>
-        </div>
+  <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=atharva.dzine@gmail.com&su=Project Inquiry&body=Hi Atharva, I'd like to work with you on..."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-[#0e0e0e] px-10 py-5 rounded-full text-[18px] font-bold hover:bg-[#f0f0f0] transition-colors inline-block text-center"
+>
+  Start a Project
+</a>
+
+  <a
+    href="/Atharva_final.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    download="Atharva_Resume.pdf"
+    className="text-white px-10 py-5 rounded-full text-[18px] font-bold hover:bg-white/5 transition-colors inline-block text-center"
+    style={{
+      background: "#1f1f1f",
+      border: "1px solid rgba(72,72,72,0.3)",
+    }}
+  >
+    Resume / CV
+  </a>
+</div>
       </div>
     </section>
   );

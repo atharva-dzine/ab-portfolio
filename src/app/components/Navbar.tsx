@@ -51,7 +51,9 @@ export function Navbar() {
         {/* CTA Button */}
         <div className="hidden md:flex">
           <a
-            href="mailto:atharva.dzine@gmail.com?subject=Project%20Inquiry&body=Hi%20Atharva%2C%20I%27d%20like%20to%20work%20with%20you%20on..."
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=atharva.dzine@gmail.com&su=Project Inquiry&body=Hi Atharva, I'd like to work with you on..."
+  target="_blank"
+  rel="noopener noreferrer"
             className="bg-white text-[#0e0e0e] text-sm font-bold px-5 py-2 rounded-full hover:bg-[#f0f0f0] transition-colors"
           >
             Hire Me
