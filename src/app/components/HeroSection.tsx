@@ -1,4 +1,4 @@
-import profileImg from "/Users/ab/Documents/Portfolio_v2/src/assets/fd392b1ad8ccdec269c24deecec4ff99211e098f.png";
+var profileImg = "figma:asset/fd392b1ad8ccdec269c24deecec4ff99211e098f.png";
 
 export function HeroSection() {
   return (
